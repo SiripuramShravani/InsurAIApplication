@@ -1,0 +1,137 @@
+/* Add the rest of the CSS from the previous code snippet */
+ 
+.menu-open .navbar-nav {
+  text-align: center !important;
+ 
+}
+.nav-width{
+  width: 100%;
+  /* border: 1px solid red !important; */
+  margin: auto;
+ padding-left: 5rem !important;
+ padding-right: 5rem !important;
+}
+.menu-open .navbar-nav .nav-link {
+  display: block !important;
+ 
+ 
+  text-align: center  !important;
+}
+.color-navlink{
+  /* border: 1px solid red !important;  */
+ 
+  color: blue;
+}
+.color-navlink:hover{
+  color: blue;
+}
+.nav-link {
+  color: rgb(0, 0, 190) ;
+/* color: red; */
+}
+.nav-link:hover {
+  color: rgb(0, 0, 190) ;
+/* color: red; */
+}
+.menu-open .dropdown-menu {
+  text-align: center  !important;
+}
+ 
+.centered {
+  margin-left: auto  !important;
+  margin-right: auto  !important;
+}
+.dropdown-item {
+  text-align: left !important;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* #basic-nav-dropdown{
+  color:rgb(0, 0, 198) !important;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+} */
+ 
+#basic-nav-dropdown.active {
+  font-weight: 500 !important;
+  color:blue; /* Color for active link */
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important; */
+}
+.Text-color{
+  color: blue !important;
+}
+.ITlogo {
+  max-width: 100%;
+  height: 50px;
+}
+.logo-my{
+  margin-left: 55px !important;
+}
+.nav-mx{
+  margin-right: 55px !important;
+}
+@media screen and (max-width:1080px) {
+ .nac{
+  width: 85vw !important;
+  height: auto;
+ 
+ 
+ 
+ margin: auto !important;
+ }
+ .color-navlink{
+  /* border: 1px solid red !important;  */
+  margin-left: 0rem !important;
+  color: blue;
+}
+  .nav-mx{
+ 
+    width: fit-content !important;
+   margin: auto !important;
+   text-align: justify;
+ 
+  }
+}
+@media screen and (max-width:600px) {
+  .color-navlink{
+    /* border: 1px solid red !important;  */
+    margin-left: 0rem !important;
+    color: blue;
+  }
+  .nav-width{
+    width: 100%;
+    /* border: 1px solid red !important; */
+    margin: auto;
+    padding-left: 0.6rem !important;
+    padding-right: 0.6rem !important;
+  }
+  .ITlogo {
+    max-width: 100%;
+    height: 30px;
+ 
+  }
+  .logo-my{
+    margin-left: 1px !important;
+  }
+}
+ 
+@media screen and (max-width:256px) {
+  .color-navlink{
+    /* border: 1px solid red !important;  */
+    margin-left: 0rem !important;
+    color: blue;
+  }
+  .nav-width{
+    width: 100%;
+    /* border: 1px solid red !important; */
+    margin: auto;
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+  }
+  .ITlogo {
+    max-width: 100%;
+    height:20px;
+  }
+  .logo-my{
+    margin-left: 0px !important;
+  }
+ 
+}

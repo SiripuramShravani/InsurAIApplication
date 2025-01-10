@@ -1,0 +1,152 @@
+/* 
+
+.scanner-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .scanner-container {
+    position: relative;
+    width: 450px; 
+    height: 650px; 
+    border: 2px solid black;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+  
+  .scan-line {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: green;
+    animation: scan 4s linear infinite;
+  }
+  
+  @keyframes scan {
+    0%,
+    50%,
+    100% {
+      top: -4px;
+    }
+    25%,
+    75% {
+      top: 100%;
+    }
+  }
+  
+  .progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   margin-left: 100px;
+  }
+  
+  .progress-circle {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+  }
+  
+  .circle {
+    fill: none;
+    stroke: green;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: center;
+  }
+  
+  .progress-text {
+    fill: rgb(67, 63, 63);
+    font-size: 0.5em;
+    text-anchor: middle;
+    text-align: center;
+  }
+  
+  .checkmark-big {
+    fill: green;
+    font-size: 1.5em;
+    text-anchor: middle;
+    text-align: center;
+  }
+  
+  .progress-titles {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  margin-left: 25px;
+    font-size: 1.5rem;
+   
+  }
+  
+  .progress-title {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    opacity: 0.3;
+  
+    margin-left: 150px;
+
+  }
+  
+  .progress-title.completed {
+    opacity: 1;
+  }
+  
+  .checkmark {
+    display: none;
+    color: green;
+    
+  }
+  
+  .progress-title.completed .checkmark {
+    display: inline;
+  }
+
+  .idp_btn {
+  
+   width:100%;
+   margin: auto;
+   text-align: center;
+  
+  }
+  .idp_submit{
+    padding: 15px 20px;
+ border-radius: 15px;
+    color: white;
+    background-color: rgba(1, 1, 235, 0.74);
+  }
+
+  .ipd-titles {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-top: 25px;
+    margin-left: 15px;
+    color:blue;
+  }
+
+  .idp-data{
+  
+    text-align: left;
+  
+   margin-top: 15px;
+   margin-bottom: 20px;
+    margin-right: 20px;
+    list-style: none;
+    font-size: 1.1rem;
+    
+    font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif  !important ;
+  }
+  
+
+
+ */

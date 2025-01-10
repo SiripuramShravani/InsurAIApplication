@@ -1,0 +1,161 @@
+/* EmailToFnol.css */
+ 
+@keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .Email-cards{
+   
+    max-width: 100%;
+    height: auto;
+   border: 1px solid blue ;
+  /* padding:0px 10px; */
+    margin-bottom: 1px;
+    opacity: 0;
+    transition: transform 1s ease;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-wrap: wrap;
+  }
+  .Email-cards:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .Mail-From{
+   
+    display: block !important;
+    flex-wrap: wrap !important;
+    font-size: 1rem !important;
+  
+  }
+  .move-right {
+    transform: translateX(150%); /* Move the card to the right */
+  }
+  
+  .check-icon {
+    display: inline-block;
+  
+  
+    color: green;
+  }
+  /* Delay for the cards */
+  .Email-cards:nth-child(1) { animation: slideIn 0.5s ease forwards 0.1s; }
+  .Email-cards:nth-child(2) { animation: slideIn 0.5s ease forwards 0.2s; }
+  .Email-cards:nth-child(3) { animation: slideIn 0.5s ease forwards 0.3s; }
+  /* Add more as needed */
+  .contentText_ETF{
+   margin-top:55px !important;
+  font-size: 1rem;
+    font-weight: 400 !important;
+  font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif  !important ;
+  }
+  
+  @media screen and (max-width:1055px) {
+    .Email-cards{
+      padding-left: 0px !important;
+     
+    }
+    .ETF-mail{
+     
+      font-size: 1rem;
+             font-weight: 400 !important;
+           font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif  !important ;
+           }
+  }
+  @media screen and (max-width:915px) {
+    .Email-cards{
+      padding-left: 0px !important;
+     
+    }
+    .ETF-mail{
+     
+      font-size: 0.9rem;
+             font-weight: 400 !important;
+           font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif  !important ;
+           }
+  }
+  @media screen and (max-width:950px) {
+    .Email-cards{
+      padding-left: 0px !important;
+     
+    }
+    .ETF-mail{
+     
+      font-size: 0.8rem;
+             font-weight: 400 !important;
+           font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif  !important ;
+           }
+  }
+  @media screen and (max-width:555px) {
+    .Email-cards{
+      padding-left: 0px !important;
+      height:60px;
+    }
+  
+  }
+  @media screen and (max-width:475px) {
+    .Email-cards{
+      padding-left: 0px !important;
+    }
+    .ETF-mail{
+     
+  font-size: 0.8rem;
+       font-weight: 400 !important;
+     font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif  !important ;
+     }
+  
+  }
+  @media screen and (max-width:410px) {
+   
+    .ETF-mail{
+     
+  font-size: 0.7rem;
+       font-weight: 400 !important;
+     font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif  !important ;
+     }
+  
+  }
+  @media screen and (max-width:355px) {
+   
+    .ETF-mail{
+     
+  font-size: 0.6rem;
+       font-weight: 400 !important;
+     font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif  !important ;
+     }
+  
+  }
+  @media screen and (max-width:325px) {
+    .Email-cards{
+      padding-left: 0px !important;
+      height: 45px;
+    }
+    .ETF-mail{
+     
+  font-size: 0.5rem;
+       font-weight: 400 !important;
+     font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif  !important ;
+     }
+  
+  }
+  @media screen and (max-width:295px) {
+    .Email-cards{
+      padding-left: 0px !important;
+      height: 45px;
+    }
+    .ETF-mail{
+     
+  font-size: 0.48rem;
+       font-weight: 400 !important;
+     font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif  !important ;
+     }
+  
+  }

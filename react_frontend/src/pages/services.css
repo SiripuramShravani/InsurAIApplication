@@ -1,0 +1,1446 @@
+/* // eslint-disable-next-line */
+/* styles.css */
+ 
+ 
+ 
+   
+ 
+ 
+ 
+.img_box {
+  text-align: center;
+
+}
+
+.card-titleIDP {
+  margin-top: 10px;
+}
+
+
+.side-Fnol-btn {
+  margin-right: 55px !important;
+}
+.text_hover {
+  margin-top: 10px;
+}
+
+.btn-img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+
+.box-1{
+ 
+  width: 100%;
+  height: 100%;
+display: flex !important;
+flex-wrap: wrap !important;
+
+background-color: rgb(255, 255, 255);
+}
+.card {
+border: none !important;
+box-shadow: none !important;
+  width: 100%;
+  height: auto;
+display: flex;
+flex-wrap: wrap;
+  margin: auto !important;
+  margin-bottom: 85px !important;
+  /* padding: 20px;  
+  border-radius: 8px; */
+  opacity: 0;
+ 
+  transform: translateY(10%);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.load{
+  /* width: 100%; */
+  box-shadow: none !important;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section1-container{
+
+  width: 100%;
+  height: 100%;
+  margin: 25px;
+  box-shadow: 0 7px 45px rgba(0, 0, 0, 0.1) !important;
+ 
+
+}
+.title-box{
+ 
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 100%;
+  height: fit-content;
+ margin: auto;
+ margin-top: 0px;
+ margin-bottom: 0px !important;
+  text-align: center;
+}
+.title-1-box{
+max-width: 900px;
+height:fit-content;
+ 
+margin: auto ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+
+
+.title-2-box{
+
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+column-gap:3rem;
+margin-top: 40px;
+}
+.box-1-card{
+  border: 1px solid wheat;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 400px;
+  height: 400px;
+  margin: 15px;
+  text-align: center;
+  box-shadow: 0 7px 25px (0, 0, 0, 0.1);
+}
+.box-1-card:hover{
+  margin-bottom: 35px;
+}
+.box-1-title{
+  width: 300px;
+  height: fit-content;
+  margin: auto !important ;
+  line-height: 28px !important;
+  /* border: 1px solid red; */
+  font-size: 1.64rem !important;
+  font-weight: 300 !important;
+  font-family: 'Gill Sans', 'Gill Sans MT' , Calibri, 'Trebuchet MS', sans-serif !important;
+}
+.box-1-para{
+
+  font-size: 1.1rem !important;
+ font-weight: 400px !important;
+  font-family: 'Gill Sans',  Calibri, 'Trebuchet MS', sans-serif !important;
+}
+
+/* ...................................///////..................... */
+.container{
+ 
+  width: 100%;
+  height: fit-content;
+  margin: 25px;
+  box-shadow: 0 7px 45px rgba(0, 0, 0, 0.1) !important;
+
+}
+.inno-container{
+  border: 2px solid blue;
+  width: 70%;
+  height: 75vh;
+  margin: auto;
+  box-shadow: 0 7px 45px rgba(0, 0, 0, 0.1) !important;
+display: flex;
+flex-wrap: wrap;
+
+}
+.inno-box{
+ 
+  width:50%;
+  height: 300px;
+ margin: auto;
+
+}
+.inno-title{
+ 
+  max-width:100%;
+  height: 100px;
+  margin: auto;
+  text-align: center;
+ 
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+.inno-typedText{
+  font-size: 4rem !important;
+  color: rgb(27, 27, 98);
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+.inno-para{
+margin-top: 25px !important;
+ 
+  font-weight: 400;
+  font-size: 1.5rem !important;
+ 
+  font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+.inno-img-box{
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+ 
+}
+.innoMain-img{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+ max-width: 500px;
+ 
+}
+.section-1{
+  width: 50%;
+  height: 100vh;
+
+  margin-left: 55px;
+
+
+}
+.section-2{
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid red; */
+  /* margin-right: 55px; */
+  margin: auto;
+  padding: 55px;
+  justify-content: center;
+  align-items: center;
+}
+.fnol_cards{
+
+  background-color: rgb(253, 253, 253);
+  border: 5px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(61, 59, 59, 0.1);
+  outline: 1px solid wheat;
+  max-width:400px;
+  height: 450px;
+  margin: 15px;
+ padding:0px 11px;
+
+}
+.fnol_cards:hover {
+  border: 1px solid rgb(55, 114, 148);;
+}
+.fnol_cards:hover .imghandel {
+
+  cursor: pointer;
+ 
+}
+.content{
+/* border: 1px solid red; */
+  height: fit-content;
+  max-width: 700px !important;
+  box-sizing: border-box;
+  margin-top: 15px !important;
+  display: block;
+  flex-wrap: wrap;
+ 
+
+  padding-left:20px;
+  padding-bottom: 5px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.content:nth-child(1) {
+padding-right: 55px;
+border-left: 2px solid blue;
+}
+.content:nth-child(2) {
+
+  border-left: 2px solid orange;
+}
+.content:nth-child(3) {
+ 
+  border-left: 2px solid green;
+}
+.content:hover{
+  border-left: 10px solid blue;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
+}
+.title{
+  /* border: 1px solid red; */
+  width: fit-content;
+  margin-top: 0px !important;
+  margin-bottom: 10px !important;
+  color: rgb(45, 45, 45);
+  font-size: 2.1rem ;
+ 
+  font-weight: 100;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+.text-para{
+ 
+ max-width: 70%;
+ margin-top: 0px !important;
+  font-size: 1rem !important;
+ text-align: left;
+  font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif!important;
+}
+
+
+.container-2{
+/* border: 1px solid red; */
+width: auto;
+height: 100%;
+display: block;
+flex-wrap: wrap;
+
+background-color: rgb(255, 255, 255);
+}
+.idpFNOL{
+  width: auto;
+  height: 100%;
+
+  margin: 25px;
+ 
+display: block;
+flex-wrap: wrap;
+
+}
+.titleIDP{
+  width: auto;
+  height: auto;
+
+  margin: 0px !important;
+  text-align: center;
+  font-size: 2rem !important;
+  padding: 15px;
+  font-weight: 400;
+      /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif!important; */
+  }
+
+.text-paraIDP{
+
+ max-width:80%;
+  height: auto;
+/* text-align: justify; */
+ margin: auto !important;
+ font-size: 1.6rem !important;
+ font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif!important;
+}
+@media (max-width: 400px ){
+.text-paraIDP{
+  max-width: 100% !important;
+  /* border: 1px solid red !important; */
+  margin: auto !important;
+  font-size: 1.5rem !important;
+  text-align: justify;
+  font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif!important;
+}
+}
+@media (max-width: 900px ){
+.text-paraIDP{
+  max-width: 90% !important;
+  /* border: 1px solid red !important; */
+  margin: auto !important;
+  font-size: 1rem !important;
+  text-align: justify;
+  font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif!important;
+}
+}
+.idpcards-container{
+ width: fit-content;
+  height: 100%;
+
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 25px;
+}
+.img_box{
+ 
+  width: auto;
+  height: auto;  
+  text-align: center;
+  margin-top: 10px;
+}
+.imghandel{
+  /* border: 1px solid red; */
+  width: 150px;
+  height: 150px;
+
+}
+
+
+
+.idp_cards{
+  background-color: rgb(253, 253, 253);
+  border: 5px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(61, 59, 59, 0.1);
+  outline: 1px solid wheat;
+  max-width:380px;
+  height: 380px;
+  margin: 15px;
+ padding:0px 11px;
+}
+.card-titleIDP{
+
+ 
+  font-size: 1.2rem !important;
+padding: 15px;
+font-weight: 600;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif!important; */
+}
+.idp-para{
+  font-size: 1rem !important;
+  padding: 15px;
+  font-weight: 400;
+  font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif!important;
+  }
+.insurAI_card{
+ 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: flex-start;
+}
+.card-insurAI{
+ margin-top: 50px !important;
+  margin: auto !important;
+  max-width: 850px;
+  font-size: 2rem !important;
+  font-weight: 400;
+
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif!important; */
+}
+.content_insurAI{
+
+  max-width: 80%;
+  padding-right: 25px;
+  margin: auto !important;
+padding-top: 15px;
+  font-size: 1.3rem !important;
+font-weight: 400 !important;
+color: black;
+ font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif!important;
+}
+
+.AI_Card_1{
+
+  max-width: 80%;
+  height: auto !important;
+  margin: auto !important;
+  text-align: center;
+  border: none !important;
+}
+
+
+
+
+
+
+
+.Fnol_log{
+  /* border: 1px solid red; */
+width: 100%;
+  height:450px !important;
+  display: block;
+  padding-top: 20px !important;
+    border-radius: 15px;
+    /* margin-right: 25px !important; */
+  flex-wrap: wrap;
+  text-align: center;
+ color: blue;
+box-shadow: 0 7px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+
+.faq{
+ max-width:80%;
+  height: 100%;
+  margin: auto;
+ 
+ 
+}
+.faq-title{
+  margin: 55px;
+ 
+}
+.card-faq-title{
+  font-size: 2rem !important;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif!important;
+}
+.faq-para{
+ 
+  font-size: 1.1rem !important;
+  margin-top:  15px !important;
+  font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+.faq-box{
+  max-width: 85%;
+ 
+  border: 1px solid green;
+  margin-left: 55px;
+  margin-bottom: 25px;
+  padding: 15px 10px 15px 10px;
+}
+.faq-qus{
+ 
+  max-width: fit-content;
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+padding-left: 10px;
+}
+.faq-ans{
+  max-width: 700px;
+ 
+  font-size: 1rem !important;
+ 
+  font-family: 'Gill Sans',  Calibri, 'Trebuchet MS', sans-serif !important;
+  padding-left: 10px;
+  margin-top: 10px !important;
+}
+.faq-contact{
+ 
+  margin-left: 55px;
+  margin-bottom: 15px;  
+}
+.faq-end{
+  font-size: 2rem !important;
+  font-weight: 400 !important;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+padding-left: 10px;
+margin-top: 55px !important;
+}
+
+
+.side-image{
+ 
+   /* border: 1px solid red; */
+   display: flex !important;
+   flex-wrap: wrap !important;
+   align-items: center !important;
+   justify-content: center !important;
+   max-width:600px !important;
+   height:650px !important;
+   
+   
+   
+  }
+  .sideImg1{
+  width: auto !important;
+  height: auto !important;
+     display: flex !important;
+     flex-wrap: wrap !important;
+     margin: auto !important;
+     /* border: 1px solid red; */
+   
+   
+       
+  }
+  .side-AI_image {
+   
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      align-items: center !important;
+      max-width: 100% !important; /* Adjust max-width to 100% for responsiveness */
+      height: auto !important; /* Adjust height to auto for responsiveness */
+      padding-right: 55px;
+      padding-top: 25px;
+      box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+  }
+ 
+  /* Add media queries to handle different screen sizes if needed */
+  @media (max-width: 600px) {
+      .side-AI_image {
+          padding-right: 20px; /* Adjust padding for smaller screens */
+          padding-top: 10px;
+      }
+  }
+
+.next_back{
+ 
+  width: 95% !important;
+}
+.btn-img{
+
+  width: 50px;
+  height: 50px;
+  margin-top: 50px;
+}
+/* .Fnol_log:hover .imghandel{
+  background-color: white;
+  padding: 2px;
+}
+.Fnol_log:hover  .text_hover{
+color: white !important;
+} */
+
+/* ...........................AboutUs......................................................... */
+
+.About_container{
+  /* border: 1px solid red; */
+  margin-top: 120px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.about_box{
+  /* border: 1px solid red; */
+  max-width: 80%;
+  margin: auto !important;
+display: flex;
+flex-wrap: wrap;
+/* justify-content: center;
+align-items: center; */
+padding-top: 55px;
+}
+.about_content{
+  /* border: 1px solid red; */
+  width: 50%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+      align-items: left;
+      justify-content: left;
+}
+.about-title{
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px solid red; */
+  font-size: 3rem !important;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+  padding-left: 40px;
+}
+
+.about-qs-box{
+  /* border: 1px solid green; */
+  width: 40%;
+  height: 100vh;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ text-align: left;
+ padding-left: 40px;
+ /* justify-content: right;
+align-items: flex-end; */
+}
+.about-qs{
+  /* border: 1px solid green; */
+ width: 400px;
+ font-size: 4rem !important;
+  font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif !important;
+  /* padding: 40px;
+  padding-bottom: 400px; */
+ height: fit-content;
+ display: flex;
+ flex-wrap: wrap;
+/* justify-content: center;
+align-items: center; */
+line-height: normal;
+
+}
+.about_ans{
+  /* border: 1px solid red; */
+  width:50%;
+  height: 100vh;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: left;
+ 
+ padding-left: 40px;
+}
+
+.about_ans_box{
+  border: 1px solid green;
+ 
+display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 130vh;
+
+  margin-top: 65px;
+  background-color: rgb(234, 241, 244);
+  padding-bottom: 40px;
+  padding-left: 15px;
+  padding-top: 15px;
+padding-right: 55px !important;
+margin-bottom: 90px;
+}
+
+.why-qs-box{
+  /* border: 1px solid red; */
+  height: fit-content;
+  width: 80%;
+
+}
+
+.qs-heading{
+  /* border: 1px solid red; */
+  margin: 0px !important;
+  margin-left: 38px !important;
+  font-size: 1.6rem !important;
+  margin-top: 20px !important;
+  font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif !important;
+ 
+}
+.qs-ans{
+  /* border: 1px solid red; */
+  width: 600px;
+  margin: 0px !important;
+  margin-left: 38px !important;
+  font-size: 1.3rem !important;
+  font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif !important;
+  padding: 0% !important;
+  line-height: normal !important;
+  /* margin-bottom: 25px; */
+}
+
+
+
+.service-summary{
+ 
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+ 
+  justify-content: center;
+}
+
+
+.services_img{
+  /* border: 1px solid red; */
+  width: 100%;
+  height:60vh;
+  margin: auto !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.serv_img{
+  width: auto;
+  height: 80%;
+}
+.services-box{
+  /* border: 1px solid red; */
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding-bottom: 150px;
+}
+.ser-card1{
+  /* border: 1px solid red; */
+  width: 580px;
+  height: 250px;
+  margin: 0px !important;
+
+}
+.ser-head{
+  /* border: 1px solid red; */
+  margin: 15px !important;
+ 
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+
+}
+.ser-para{
+  margin: 15px !important;
+ 
+  font-size: 1.1rem !important;
+  font-weight: 400 !important;
+  font-family: 'Gill Sans',  Calibri, 'Trebuchet MS', sans-serif !important;
+
+}
+
+
+/* ...,,,,,,,,,,.........................................//////billy fonts */
+
+
+.container-idp{
+  width: auto;
+  height: auto;
+  /* border: 1px solid red; */
+display: flex;
+flex-wrap: wrap;
+margin: auto !important;
+
+}
+.card-idp {
+  flex: 1 0 100px; /* Flex-grow: 1, Flex-shrink: 0, Flex-basis: 100px */
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1) !important;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  margin:80px 15px;
+}
+
+.card-idp-img{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+.Fnol_flowchart {
+
+  width: 100%;
+  height: 100%;
+ 
+
+}
+.card1-margin{
+  margin-left: 55px;
+}
+.card2-margin{
+  margin-right: 55px;
+}
+@media (max-width: 1080px) {
+  .container-idp{
+      display: block;
+      flex-wrap: wrap;
+
+      }
+      .card1-margin{
+          margin-right: 55px;
+      }
+      .card2-margin{
+          margin-left: 55px;
+      }
+}
+
+
+.card-three{
+  /* border: 1px solid red; */
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: left !important;
+  align-items: left !important;
+  margin: auto !important;
+
+}
+
+.card-summary-three{
+  flex: 1 0 100px; /* Flex-grow: 1, Flex-shrink: 0, Flex-basis: 100px */
+
+
+  text-align: center;
+
+}
+
+.card2-three{
+
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: right !important;
+  align-items: right !important;
+  margin: auto !important;
+}
+
+
+
+/* ...............................................InsurAI................................ */
+
+/* styles.css */
+
+.container-box {
+  width: 100% !important;
+  height: 100% !important;
+  /* border: 5px solid red !important; */
+  padding: 20px !important;
+  /* box-shadow: 0 7px 45px rgba(0, 0, 0, 0.1) !important; */
+}
+
+.section-1-heading{
+ 
+  color:rgb(0, 0, 106) !important;
+  font-size: 2rem !important;
+  font-weight: 400 !important;
+   /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important; */
+ }
+ .Nasaliza-pc{
+  font-size: 2rem !important;
+  font-weight: 200 !important;
+  color: blue;
+  padding: 0.3rem;
+ }
+ .section-1-para{
+ 
+  font-size: 1.4rem !important;
+  font-weight:400 !important;
+  font-family: 'Gill Sans',  Calibri, 'Trebuchet MS', sans-serif !important;
+}
+.centered-text {
+ 
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important; */
+  margin: 10px 0;
+}
+
+.grid {
+  margin: 20px 0;
+}
+
+.flex-container {
+
+  margin-top: 15px !important;
+}
+
+.box-ser {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid wheat !important;
+  border-radius: 8px;
+}
+
+.box-image {
+  max-width: 40%;
+  height: auto;
+  /* margin-bottom: 10px; */
+}
+
+.box-title {
+  line-height: 28px !important;
+  /* border: 1px solid red; */
+  font-size: 1.3rem !important;
+  font-weight: 200 !important;
+  /* font-family: 'Gill Sans', 'Gill Sans MT' , Calibri, 'Trebuchet MS', sans-serif !important; */
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important; */
+  margin: 10px 0 !important;
+}
+
+.box-summary {
+ 
+  font-size: 1.1rem !important;
+ font-weight: 400px !important;
+  font-family: 'Gill Sans',  Calibri, 'Trebuchet MS', sans-serif !important;
+  /* font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif !important; */
+ 
+  margin-top: 25px !important;
+}
+
+
+
+
+/* styles.css */
+
+.main-container {
+  padding: 20px;
+}
+
+.image-box {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.boxes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center !important;
+  /* border: 1px solid red; */
+  width: auto;
+  height: 100%;
+  margin: auto !important;
+
+}
+
+.text-box {
+  max-width: 700px !important;
+  border-radius: 0% !important;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+
+}
+
+.left-border-red:hover,
+.left-border-blue:hover,
+.left-border-green:hover {
+  border-left: 6px solid rgb(2, 2, 77);
+}
+.left-border-red {
+    border-left: 3px solid blue;
+  }
+ 
+  .left-border-blue {
+    border-left: 3px solid orangered;
+}
+
+.left-border-green {
+  border-left: 3px solid green;
+ 
+}
+
+.box-heading {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: rgb(0, 0, 74);
+}
+
+
+.box-paragraph {
+  margin-top: 5px !important;
+  font-size: 1.1rem !important;
+  font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif!important;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 960px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-box,
+  .boxes-container {
+    width: 100%;
+   
+  }
+}
+/* .........................................IDP FNOL....................... */
+
+.analys-idp{
+
+/* border: 1px solid red; */
+margin-top: 75px;
+margin-bottom: 65px;
+/* background-color: rgba(57, 57, 236, 0.458); */
+}
+
+
+.analys-container {
+width: 100% !important;
+height: auto !important;
+display: flex !important;
+flex-wrap: wrap !important;
+justify-content: center !important;
+align-items: center !important;
+
+
+/* border: 1px solid red; */
+
+
+
+}
+
+.analys-grid {
+background-color: white;
+border: 1px solid #ddd;
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+aspect-ratio: 1 / 1;
+}
+
+.analys-grid h3 {
+margin-top: 0;
+font-size: 24px;
+}
+
+.analys-grid p {
+font-size: 16px;
+color: #666;
+}
+
+.animate-number {
+margin-top: 20px;
+font-size: 36px;
+font-weight: bold;
+color: #333;
+}
+
+@media (max-width: 600px) {
+.analys-grid {
+  width: 90%;
+  height: 150px;
+}
+}
+/* ..............................................files analysis/................ */
+
+
+.fileAnalys-container {
+margin-top: 20px;
+}
+
+.fileAnalys-grid {
+background-color: white;
+border: 1px solid #ddd;
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+
+.fileAnalys-animate-number {
+ 
+font-weight: bold;
+color: #3f51b5; /* Change color as needed */
+}
+
+.fileAnalys-grid img {
+max-width: 100%;
+height: 70px;
+margin-bottom: 10px; /* Add margin to the bottom of the image */
+}
+
+
+/* ...........................................vide demo idp.................... */
+.pv-container {
+display: flex;
+margin-top: 15px;
+/* justify-content: center;
+align-items: center; */
+height: auto;
+margin-bottom: 85PX;
+/* background-color: #f0f0f0; */
+/* padding: 20px; */
+}
+
+.pv-content {
+display: flex;
+flex-direction: row;
+/* align-items: center;
+justify-content: center; */
+width: 100%;
+max-width: 1200px;
+margin: auto;
+}
+
+.video-container {
+
+flex: 1;
+display: flex;
+/* justify-content: center;
+align-items: center; */
+/* padding: 20px; */
+}
+
+.points-container {
+flex: 1;
+
+text-align: left;
+margin-top: 55px;
+padding: 20px;
+padding-top: 45px;
+list-style: none !important;
+font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+.pv-content {
+  flex-direction: column;
+}
+
+.video-container, .points-container {
+  padding: 10px;
+  padding-top: 50px;
+}
+}
+.upload-doc{
+text-align: center;
+
+}
+.upload-btn{
+text-align: center;
+background-color: #3f51b5;
+padding: 20px;
+border-radius: 30px;
+color: white;
+}
+.upload-btn:hover{
+  cursor: pointer;
+}
+.doc-idp{
+border: 1px solid red;
+}
+/* Add this CSS to your stylesheet */
+@keyframes scan {
+0% {
+  top: -100%;
+}
+100% {
+  top: 100%;
+}
+}
+
+.scanner {
+position: relative;
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+
+.scanner::before {
+content: '';
+position: absolute;
+width: 100%;
+height: 2px;
+background: blue;
+animation: scan 2s linear infinite;
+}
+
+/* .hidden {
+display: none;
+} */
+.dropzonemainbox{
+border: 1px solid black !important;
+}
+
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Mukta:700");
+
+.idp-button-learn-more {
+position: relative;
+display: inline-block;
+cursor: pointer;
+outline: none;
+border: 0;
+vertical-align: middle;
+text-decoration: none;
+background: transparent;
+padding: 0;
+font-size: inherit;
+font-family: inherit;
+width: 12rem;
+height: auto;
+}
+
+.idp-button-learn-more .idp-button-circle {
+transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+position: relative;
+display: block;
+margin: 0;
+width: 3rem;
+height: 3rem;
+background: rgb(73, 73, 247);
+border-radius: 1.625rem;
+}
+
+.idp-button-learn-more .idp-button-circle .idp-button-icon {
+transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+position: absolute;
+top: 0;
+bottom: 0;
+margin: auto;
+background: #fff;
+}
+
+.idp-button-learn-more .idp-button-circle .idp-button-icon.idp-button-arrow {
+transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+left: 0.625rem;
+width: 1.125rem;
+height: 0.125rem;
+background: none;
+}
+
+.idp-button-learn-more .idp-button-circle .idp-button-icon.idp-button-arrow::before {
+position: absolute;
+content: "";
+top: -0.25rem;
+right: 0.0625rem;
+width: 0.625rem;
+height: 0.625rem;
+border-top: 0.125rem solid #fff;
+border-right: 0.125rem solid #fff;
+transform: rotate(45deg);
+}
+
+.idp-button-learn-more .idp-button-button-text {
+transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+/* padding: 0.75rem 0;
+margin: 0 0 0 1.85rem; */
+color:white !important;
+font-weight: 700;
+line-height: 1.6;
+text-align: center;
+text-transform: uppercase;
+}
+
+.idp-button-learn-more:hover .idp-button-circle {
+width: 110%;
+
+}
+
+.idp-button-learn-more:hover .idp-button-circle .idp-button-icon.idp-button-arrow {
+background: #fff;
+transform: translate(1rem, 0);
+}
+
+.idp-button-learn-more:hover .idp-button-button-text>.Fnol-card {
+color: #fff !important;
+}
+.idp-button-learn-more:hover .idp-button-button-text>.idp-card{
+color: #fff !important;
+}
+.idp-button-learn-more:hover .idp-button-button-text>.insurAI-card{
+color: #fff !important;
+}
+
+@supports (display: grid) {
+#idp-button-container {
+  grid-area: main;
+  align-self: center;
+  justify-self: center;
+}
+}
+/* // files  */
+/* componentstyles.css */
+
+/* Style for the container of the document preview */
+.document-container {
+display: flex;
+justify-content: center;
+
+margin-top: 20px;
+position: relative;
+height: 500px; /* Fixed height */
+overflow: hidden;
+}
+
+.pdf-document-wrapper{
+position: relative;
+width: 300px; /* Set the width of the document wrapper */
+height: 60%;
+/* padding-top: 55px; */
+/* border: 1px solid blue; Example border */
+overflow: hidden;
+}
+/* Style for the wrapper around the document or image */
+.document-wrapper {
+
+position: relative;
+width: 300px; /* Set the width of the document wrapper */
+height: fit-content; /* Set the height of the document wrapper */
+/* border: 1px solid red; Example border */
+overflow: hidden;
+}
+
+/* Style for the PDF document */
+.pdf-document {
+width: 100%; /* Ensure the PDF document fills its container */
+}
+
+/* Style for the image preview */
+.document {
+width: 100%; /* Ensure the image fills its container */
+height: auto; /* Allow the image to scale proportionally */
+}
+
+/* Style for the page count text */
+.page-count {
+text-align: center;
+font-size: 0.8rem;
+}
+/* componentstyles.css */
+
+/* Style for the container of the scanning effect */
+.scanner-container {
+position: relative;
+width: 100%; /* Set the width of the scanning container */
+height: 2px; /* Set the height of the scanning line */
+background-color: blue !important; /* Set the color of the scanning line */
+}
+
+/* Style for the scanning line */
+.idp-scan-line {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-top: 4px solid blue !important; /* Change border color to blue */
+  animation: scan 2s linear infinite; /* Apply the scan animation */
+}
+ 
+/* Keyframes for the scanning animation */
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+.idp-top {
+  top: 0;
+}
+ 
+.idp-bottom {
+  bottom: 0;
+}
+
+.fetch-idp-data{
+max-width:600px;
+height: fit-content !important;
+border: 1px solid blue;
+padding:15px 40px 0px 40px !important;
+
+align-items: center !important;
+justify-content: center !important;
+margin: auto !important;
+box-shadow: 5px 10px 10px rgba(128, 125, 125, 0.1);
+}
+.ipd-titles{
+font-size: 1rem !important;
+padding-bottom: 10px;
+}
+.idp-fetch-container{
+
+width: 150%;
+
+}
+
+.floderuplod-box{
+width: 40%;
+justify-content: center;
+align-items: center;
+padding:10px ;
+
+
+}
+
+@media (max-width: 900px) {
+.floderuplod-box{
+  width: 100%;
+ 
+}
+
+}
