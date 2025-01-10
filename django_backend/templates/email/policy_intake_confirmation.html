@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy Submission Confirmation</title>
+</head>
+<body style="font-family: 'Arial', sans-serif; line-height: 1.6; color: #333333; background-color: #F5F5F5; margin: 0; padding: 0;">
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #F5F5F5;">
+        <tr>
+            <td align="center" style="padding: 40px 20px;">
+                <table cellpadding="0" cellspacing="0" border="0" width="600" style="max-width: 600px; background-color: #FFFFFF; border: 1px solid #DDDDDD;">
+                    <!-- Header -->
+                    <tr>
+                        <td style="padding: 30px 40px; text-align: left; border-bottom: 1px solid #DDDDDD;">
+                            <img src="data:image/png;base64,{{ company_logo }}" alt="Company Logo" style="max-width: 180px; max-height: 60px;">
+                        </td>
+                    </tr>
+                    <!-- Main Content -->
+                    <tr>
+                        <td style="padding: 40px;">
+                            <h1 style="color: #003366; font-size: 24px; margin: 0 0 20px 0;">Policy Submission Confirmation</h1>
+                            <p style="margin-bottom: 20px;">Dear {{ name }},</p>
+                            <p style="margin-bottom: 20px;">We are pleased to confirm that your insurance policy has been successfully submitted and is now active. Please find the details of your policy below:</p>
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border: 1px solid #DDDDDD; border-collapse: collapse; margin-bottom: 20px;">
+                                <tr>
+                                    <td style="padding: 10px; border-bottom: 1px solid #DDDDDD; width: 40%;"><strong>Policy Number:</strong></td>
+                                    <td style="padding: 10px; border-bottom: 1px solid #DDDDDD;">{{ policy_number }}</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px; border-bottom: 1px solid #DDDDDD;"><strong>Policy Type:</strong></td>
+                                    <td style="padding: 10px; border-bottom: 1px solid #DDDDDD;">{{ policy_type }}</td>
+                                </tr>
+                            </table>
+                            <h2 style="color: #003366; font-size: 18px; margin: 30px 0 15px;">Next Steps</h2>
+                            <ol style="margin-bottom: 20px; padding-left: 20px;">
+                                <li style="margin-bottom: 10px;">Keep an eye on your email for further updates.</li>
+                                <li style="margin-bottom: 10px;">Our team will inform you about your premium based on the details submitted.</li>
+                                <li style="margin-bottom: 10px;">Contact our customer service team if you have any questions or need to make changes to your policy.</li>
+                            </ol>
+                            <p style="margin-top: 30px;">Thank you for choosing {{ company_name }} for your insurance needs. We value your trust and are committed to providing you with excellent service.</p>
+                            <p>If you have any questions or require further assistance, please do not hesitate to contact our customer support team.</p>
+                        </td>
+                    </tr>
+                    <!-- Contact Information -->
+                    <tr>
+                        <td style="background-color: #F0F0F0; padding: 30px 40px; border-top: 1px solid #DDDDDD;">
+                            <h2 style="color: #003366; font-size: 18px; margin: 0 0 15px;">Contact Information</h2>
+                            <p style="margin: 5px 0;">Phone: {{ support_phone }}</p>
+                            <p style="margin: 5px 0;">Email: {{ support_email }}</p>
+                            <p style="margin: 5px 0;">Website: {{ company_website }}</p>
+                        </td>
+                    </tr>
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color: #003366; color: #FFFFFF; text-align: center; padding: 20px; font-size: 12px;">
+                            <p style="margin: 0;">&copy; {% now "Y" %} {{ company_name }}. All rights reserved.</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

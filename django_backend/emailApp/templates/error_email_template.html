@@ -1,0 +1,320 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Notification</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e2e2e2 0%, #ffffff 100%);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #007BFF;
+            font-size: 28px;
+            border-bottom: 3px solid #007BFF;
+            padding-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.8;
+            margin: 10px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            background-color: #f1f1f1;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        li:hover {
+            background-color: #e7f3ff;
+        }
+        li i {
+            margin-right: 10px;
+            color: #007BFF;
+        }
+        .response-highlight {
+            background-color: #e7f3ff;
+            border-left: 5px solid #007BFF;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .response-highlight:hover {
+            transform: translateY(-2px);
+        }
+        .details-box {
+            border: 1px solid #007BFF;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .details-box:hover {
+            transform: translateY(-2px);
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #777;
+            text-align: center;
+        }
+        .emoji {
+            font-size: 18px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚨 Error Notification</h1>
+        <p>Dear Team,</p>
+        <p>🔴 An error has occurred:</p>
+        
+        <div class="response-highlight">
+            <strong>Response:</strong>
+            <p><strong>Error Message:</strong> {{ error_message }}</p>
+            <p><strong>Error Source:</strong> {{ error_source }}</p> 
+        </div>
+        
+        <div class="details-box">
+            <p><strong>Details:</strong></p>
+            <ul>
+                <li><i class="fas fa-user"></i><strong>User : </strong> {{ username }}</li>
+                <li><i class="fas fa-laptop"></i><strong>User IP : </strong> {{ user_ip }}</li>
+                <li><i class="fas fa-file"></i><strong>File Name : </strong> {{ file_name }}</li>
+                <li><i class="fas fa-file-upload"></i><strong>File Type : </strong> {{ file_type }}</li>
+                <li><i class="fas fa-link"></i><strong>Request URL : </strong> {{ request_url }}</li>
+                <li><i class="fas fa-method"></i><strong>Request Method : </strong> {{ request_method }}</li>
+            </ul>
+        </div>
+
+        <p>Please take the necessary actions to resolve this issue. ⚠️</p>
+        <p>Thank you!</p>
+    </div>
+    <div class="footer">
+        <p>This is an automated message. Please do not reply.</p>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Notification</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        /* Existing styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e2e2e2 0%, #ffffff 100%);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        /* Existing heading styles */
+        h1 {
+            color: #007BFF;
+            font-size: 28px;
+            border-bottom: 3px solid #007BFF;
+            padding-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        /* New table styles */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .data-table th {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .data-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+        .data-table tr:hover {
+            background-color: #f5f9ff;
+        }
+        /* New section styles */
+        .error-section {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #007BFF;
+            transition: transform 0.3s;
+        }
+        .error-section:hover {
+            transform: translateY(-2px);
+        }
+        .error-section h2 {
+            color: #007BFF;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        /* Preserve existing styles */
+        .response-highlight, .details-box, .footer {
+            /* Keep your existing styles */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚨 Error Notification</h1>
+        <p>Dear Team,</p>
+        <p>🔴 An error has occurred:</p>
+        
+        <div class="response-highlight">
+            <strong>Response:</strong>
+            <p><strong>Error Message:</strong> {{ error_message }}</p>
+            <p><strong>Error Source:</strong> {{ error_source }}</p> 
+        </div>
+        
+        <div class="details-box">
+            <p><strong>Details:</strong></p>
+            <ul>
+                <li><i class="fas fa-user"></i><strong>User : </strong> {{ username }}</li>
+                <li><i class="fas fa-laptop"></i><strong>User IP : </strong> {{ user_ip }}</li>
+                <li><i class="fas fa-file"></i><strong>File Name : </strong> {{ file_name }}</li>
+                <li><i class="fas fa-file-upload"></i><strong>File Type : </strong> {{ file_type }}</li>
+                <li><i class="fas fa-link"></i><strong>Request URL : </strong> {{ request_url }}</li>
+                <li><i class="fas fa-code"></i><strong>Request Method : </strong> {{ request_method }}</li>
+            </ul>
+        </div>
+
+        {% if failed_emails %}
+        <div class="error-section">
+            <h2><i class="fas fa-envelope"></i> Failed Emails</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Email Address</th>
+                        <th>Status</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for email in failed_emails %}
+                    <tr>
+                        <td><i class="fas fa-envelope"></i> {{ email.address }}</td>
+                        <td>{{ email.status }}</td>
+                        <td>{{ email.timestamp }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+
+        {% if failed_documents %}
+        <div class="error-section">
+            <h2><i class="fas fa-file-alt"></i> Failed Documents</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Document Name</th>
+                        <th>Type</th>
+                        <th>Size</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for doc in failed_documents %}
+                    <tr>
+                        <td><i class="fas fa-file"></i> {{ doc.name }}</td>
+                        <td>{{ doc.type }}</td>
+                        <td>{{ doc.size }}</td>
+                        <td>{{ doc.status }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+
+        <p>Please take the necessary actions to resolve this issue. ⚠️</p>
+        <p>Thank you!</p>
+
+        <div class="footer">
+            <p>This is an automated message. Please do not reply.</p>
+        </div>
+    </div>
+</body>
+</html>

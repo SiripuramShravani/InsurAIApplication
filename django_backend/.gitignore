@@ -1,0 +1,9 @@
+# dependencies
+.env
+.venv
+
+# Django static and media folders
+/static/
+/Media/
+/reports/
+/faiss_index/
