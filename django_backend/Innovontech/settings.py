@@ -37,8 +37,14 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 # DEBUG = False
 
-ALLOWED_HOSTS = ['91.108.111.109', '127.0.0.1','10.0.2.2', 'insurai.innovontek.com', 'innovon.ai','insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net']
-
+ALLOWED_HOSTS = [
+    '91.108.111.109', 
+    '127.0.0.1',
+    '10.0.2.2', 
+    'insurai.innovontek.com', 
+    'innovon.ai',
+    'insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -61,12 +67,16 @@ INSTALLED_APPS = [
 CORS_ORIGIN_ALLOW_ALL=False
 #CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
-       'http://localhost:3000',
-       'https://innovon.ai',
-        'https://localhost:3001',
-        'https://insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
+    'http://localhost:3000',
+    'https://localhost:3000',
+    'https://innovon.ai',
+    'https://localhost:3001',
+    'https://insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
 ]
 
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.azurewebsites\.net$",
+]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",  
@@ -76,8 +86,8 @@ CSRF_TRUSTED_ORIGINS = [
     "https://10.0.2.2:8000",
     'https://localhost:3001',
     'https://insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
-
 ]
+
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
@@ -88,17 +98,40 @@ CORS_ALLOWED_ORIGINS = [
     "https://10.0.2.2:8000",
     'https://localhost:3001',
     'https://insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
+]
 
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
 ]
 CORS_ALLOW_HEADERS = [
-    "content-type",
-    "x-csrftoken",
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
 ]
+
 CORS_EXPOSE_HEADERS = ["Content-Type", "X-CSRFToken"]
-SESSION_COOKIE_SAMESITE = 'None'
-CSRF_COOKIE_SAMESITE = 'None'
-SESSION_COOKIE_SECURE = False
-CSRF_COOKIE_SECURE = False
+# SESSION_COOKIE_SAMESITE = 'None'
+# CSRF_COOKIE_SAMESITE = 'None'
+# SESSION_COOKIE_SECURE = False
+# CSRF_COOKIE_SECURE = False
+
+SECURE_SSL_REDIRECT = True  # Redirect all HTTP traffic to HTTPS
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_HSTS_SECONDS = 31536000  # 1 year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
 
 # SESSION_COOKIE_SECURE = True
 # CSRF_COOKIE_SECURE = True
@@ -108,6 +141,15 @@ CSRF_COOKIE_SECURE = False
 # CSRF_COOKIE_DOMAIN = 'innovon.ai'
 # CSRF_COOKIE_HTTPONLY = True
 # SESSION_COOKIE_HTTPONLY = True
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SAMESITE = 'Strict'   
+CSRF_COOKIE_SAMESITE = 'Strict'
+SESSION_COOKIE_DOMAIN = 'insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
+CSRF_COOKIE_DOMAIN = 'insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
+CSRF_COOKIE_HTTPONLY = True
+SESSION_COOKIE_HTTPONLY = True
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',

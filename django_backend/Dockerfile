@@ -26,11 +26,20 @@ RUN python manage.py collectstatic --noinput
 # Expose port
 EXPOSE 8000
 
+# Add these environment variables
+ENV PYTHONUNBUFFERED=1
+ENV DJANGO_SETTINGS_MODULE=Innovontech.settings
+ENV WEBSITE_HTTPLOGGING_RETENTION_DAYS=7
+ENV WEBSITES_PORT=8000
+
+# Add this to your gunicorn command
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--timeout", "600", "--workers", "4", "Innovontech.wsgi:application"]
+
 # Add environment variable validation and logging
-CMD ["sh", "-c", "echo 'Checking MongoDB URL...' && \
-     if [ -z \"$MONGO_URI\" ]; then \
-       echo 'ERROR: MONGO_URI is not set'; \
-       exit 1; \
-     fi && \
-     echo 'Starting Gunicorn...' && \
-     /usr/local/bin/gunicorn --bind 0.0.0.0:8000 Innovontech.wsgi:application"]
+# CMD ["sh", "-c", "echo 'Checking MongoDB URL...' && \
+#      if [ -z \"$MONGO_URI\" ]; then \
+#        echo 'ERROR: MONGO_URI is not set'; \
+#        exit 1; \
+#      fi && \
+#      echo 'Starting Gunicorn...' && \
+#      /usr/local/bin/gunicorn --bind 0.0.0.0:8000 Innovontech.wsgi:application"]
