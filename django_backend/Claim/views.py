@@ -21,6 +21,11 @@ from Master_package.master_package_utils import Administration_utils
 from Master_package.master_package_schemas import RefreshTokenDetails
 from django.views.decorators.csrf import csrf_exempt
 from corsheaders.decorators import cors_allow_all
+from pymongo import MongoClient
+from django.http import JsonResponse
+import socket
+from dotenv import load_dotenv
+
 
 load_dotenv()
 
@@ -349,26 +354,96 @@ def add_company_details(request):
 @cors_allow_all
 @api_view(['GET'])
 def get_all_company_names(request):
-    client, db = MongoDB.get_mongo_client_innoclaimfnol()
-    company_collection = db['insurancecompanies']
     try:
-        companies = company_collection.find({}, {'_id': 0, 'ic_name': 1})
-        company_names = [company['ic_name'] for company in companies]
-        response = Response({
+        mongo_uri = os.getenv('MONGO_URI')
+        if not mongo_uri:
+            return Response({
+                'message': 'MongoDB URI is not configured',
+                'api': 'get_all_company_names'
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+        # Crucial:  Handle socket timeouts directly.
+        client = MongoClient(mongo_uri, serverSelectionTimeoutMS=5000, socketTimeoutMS=5000)  # Add socketTimeoutMS
+        client.server_info() # This line can raise socket timeout exceptions
+
+        db = client[os.getenv('MONGO_DB_NAME')]
+        company_collection = db['insurancecompanies']
+        companies = list(company_collection.find({}, {'_id': 0, 'ic_name': 1}))
+
+        return Response({
             'message': 'Successfully fetched company names',
-            'company_names': company_names
+            'company_names': [company['ic_name'] for company in companies]
         }, status=status.HTTP_200_OK)
-        
-        # Add CORS headers
-        response["Access-Control-Allow-Origin"] = "*"
-        response["Access-Control-Allow-Methods"] = "GET, OPTIONS"
-        response["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
-        
-        return response
+
+    except socket.timeout as e:
+        return Response({
+            'message': f'Connection timed out: {e}',
+            'api': 'get_all_company_names'
+        }, status=status.HTTP_503_SERVICE_UNAVAILABLE)  # Use 503 for connection issues
+
     except Exception as error:
-        return Response({'message': str(error), 'api': 'get_all_company_names'}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({
+            'message': f'Server error: {str(error)}',
+            'api': 'get_all_company_names'
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
     finally:
-        client.close()
+        if 'client' in locals():
+            client.close()
+
+@api_view(['GET'])
+def test_mongo_connection(request):
+    try:
+        # Get MongoDB connection details
+        mongo_uri = os.getenv('MONGO_URI')
+        
+        # Try to connect
+        client = MongoClient(mongo_uri, serverSelectionTimeoutMS=5000)
+        server_info = client.server_info()
+        
+        # Get App Service outbound IP
+        hostname = 'your-app-name.azurewebsites.net'
+        app_ip = socket.gethostbyname(hostname)
+        
+        return Response({
+            'status': 'success',
+            'mongo_connected': True,
+            'server_info': server_info,
+            'app_service_ip': app_ip,
+            'environment': {
+                'WEBSITES_PORT': os.getenv('WEBSITES_PORT'),
+                'MONGO_URI_EXISTS': bool(mongo_uri),
+            }
+        })
+    except Exception as e:
+        return Response({
+            'status': 'error',
+            'error': str(e),
+            'type': type(e).__name__
+        }, status=500)
+    
+@api_view(['GET'])
+def test_network(request):
+    try:
+        # Test MongoDB connection
+        mongo_host = os.getenv('MONGO_URI').split('@')[1].split('/')[0]
+        mongo_port = 27017  # Default MongoDB port
+        
+        # Try TCP connection
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(5)
+        result = sock.connect_ex((mongo_host, mongo_port))
+        
+        return Response({
+            'can_connect_to_mongo': result == 0,
+            'mongo_host': mongo_host,
+            'app_service_ip': socket.gethostbyname(socket.gethostname()),
+            'environment': dict(os.environ)
+        })
+    except Exception as e:
+        return Response({
+            'error': str(e)
+        }, status=500)
 
 
 @api_view(['GET'])
