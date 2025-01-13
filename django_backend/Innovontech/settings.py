@@ -37,7 +37,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 # DEBUG = False
 
-ALLOWED_HOSTS = ['91.108.111.109', '127.0.0.1','10.0.2.2', 'insurai.innovontek.com', 'innovon.ai']
+ALLOWED_HOSTS = ['91.108.111.109', '127.0.0.1','10.0.2.2', 'insurai.innovontek.com', 'innovon.ai','insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net']
 
 # Application definition
 
@@ -64,6 +64,7 @@ CORS_ALLOWED_ORIGINS = [
        'http://localhost:3000',
        'https://innovon.ai',
         'https://localhost:3001',
+        'https://insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
 ]
 
 
@@ -74,6 +75,7 @@ CSRF_TRUSTED_ORIGINS = [
     "http://10.0.2.2:8000",
     "https://10.0.2.2:8000",
     'https://localhost:3001',
+    'https://insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
 
 ]
 
@@ -85,6 +87,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://10.0.2.2:8000",
     "https://10.0.2.2:8000",
     'https://localhost:3001',
+    'https://insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
 
 ]
 CORS_ALLOW_HEADERS = [
