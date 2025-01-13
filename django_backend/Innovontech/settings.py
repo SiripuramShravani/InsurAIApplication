@@ -64,15 +64,15 @@ INSTALLED_APPS = [
     'django_extensions',
     'emailApp',
 ]
-CORS_ORIGIN_ALLOW_ALL=False
+CORS_ORIGIN_ALLOW_ALL=True
 #CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'https://localhost:3000',
-    'https://innovon.ai',
-    'https://localhost:3001',
-    'https://insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
-]
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:3000',
+#     'https://localhost:3000',
+#     'https://innovon.ai',
+#     'https://localhost:3001',
+#     'https://insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
+# ]
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
     r"^https://.*\.azurewebsites\.net$",
@@ -85,7 +85,8 @@ CSRF_TRUSTED_ORIGINS = [
     "http://10.0.2.2:8000",
     "https://10.0.2.2:8000",
     'https://localhost:3001',
-    'https://insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
+    'https://insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net',
+    'http://insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
 ]
 
 
@@ -97,7 +98,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://10.0.2.2:8000",
     "https://10.0.2.2:8000",
     'https://localhost:3001',
-    'https://insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
+    'https://insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net',
+    'http://insuraibackend-hdazb3dgfqe3etbe.canadacentral-01.azurewebsites.net'
 ]
 
 

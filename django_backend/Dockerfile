@@ -31,6 +31,8 @@ ENV PYTHONUNBUFFERED=1
 ENV DJANGO_SETTINGS_MODULE=Innovontech.settings
 ENV WEBSITE_HTTPLOGGING_RETENTION_DAYS=7
 ENV WEBSITES_PORT=8000
+ENV CORS_ALLOW_ALL_ORIGINS=True
+ENV DJANGO_CORS_ALLOW_ALL_ORIGINS=True
 
 # Add this to your gunicorn command
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--timeout", "600", "--workers", "4", "Innovontech.wsgi:application"]

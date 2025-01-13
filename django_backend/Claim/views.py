@@ -19,6 +19,9 @@ import bleach
 from dotenv import load_dotenv
 from Master_package.master_package_utils import Administration_utils
 from Master_package.master_package_schemas import RefreshTokenDetails
+from django.views.decorators.csrf import csrf_exempt
+from corsheaders.decorators import cors_allow_all
+
 load_dotenv()
 
 GOOGLE_MAPS_API_KEY = os.getenv('GOOGLE_MAPS_API_KEY')
@@ -325,18 +328,43 @@ def add_company_details(request):
         return Response({'message': str(error), 'api': 'add_company_details'}, status=status.HTTP_400_BAD_REQUEST)
     
 
+# @api_view(['GET'])
+# # @Authentication.authentication_required(allow_refresh=True)
+# def get_all_company_names(request):
+#     client, db = MongoDB.get_mongo_client_innoclaimfnol()
+#     company_collection = db['insurancecompanies']
+#     try:
+#         companies = company_collection.find({}, {'_id': 0, 'ic_name': 1})
+#         company_names = [company['ic_name'] for company in companies]
+#         return Response({
+#             'message': 'Successfully fetched company names',
+#             'company_names': company_names
+#         }, status=status.HTTP_200_OK)
+#     except Exception as error:
+#         return Response({'message': str(error), 'api': 'get_all_company_names'}, status=status.HTTP_400_BAD_REQUEST)
+#     finally:
+#         client.close()
+ 
+@csrf_exempt
+@cors_allow_all
 @api_view(['GET'])
-@Authentication.authentication_required(allow_refresh=True)
 def get_all_company_names(request):
     client, db = MongoDB.get_mongo_client_innoclaimfnol()
     company_collection = db['insurancecompanies']
     try:
         companies = company_collection.find({}, {'_id': 0, 'ic_name': 1})
         company_names = [company['ic_name'] for company in companies]
-        return Response({
+        response = Response({
             'message': 'Successfully fetched company names',
             'company_names': company_names
         }, status=status.HTTP_200_OK)
+        
+        # Add CORS headers
+        response["Access-Control-Allow-Origin"] = "*"
+        response["Access-Control-Allow-Methods"] = "GET, OPTIONS"
+        response["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+        
+        return response
     except Exception as error:
         return Response({'message': str(error), 'api': 'get_all_company_names'}, status=status.HTTP_400_BAD_REQUEST)
     finally:
