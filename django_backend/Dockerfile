@@ -15,7 +15,7 @@ RUN apt-get update \
 # Install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt \
-    && pip install --no-cache-dir gunicorn  # Explicitly install gunicorn
+    && pip install --no-cache-dir gunicorn
 
 # Copy project
 COPY . .
@@ -26,5 +26,11 @@ RUN python manage.py collectstatic --noinput
 # Expose port
 EXPOSE 8000
 
-# Updated CMD to use the correct module name
-CMD ["/usr/local/bin/gunicorn", "--bind", "0.0.0.0:8000", "Innovontech.wsgi:application"]
+# Add environment variable validation and logging
+CMD ["sh", "-c", "echo 'Checking MongoDB URL...' && \
+     if [ -z \"$MONGO_URI\" ]; then \
+       echo 'ERROR: MONGO_URI is not set'; \
+       exit 1; \
+     fi && \
+     echo 'Starting Gunicorn...' && \
+     /usr/local/bin/gunicorn --bind 0.0.0.0:8000 Innovontech.wsgi:application"]
